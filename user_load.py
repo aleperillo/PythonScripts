@@ -11,7 +11,7 @@ mongo_collection = mongo_db['logUser']
 server_ip = '10.80.24.165'
 database = 'DW_Ecosistemas_PT'
 user = 'user_mongo'
-password = 'fO0wOa+Vj8dj'
+password = ''
 
 sql_server_connection_string = (
     f'DRIVER=FreeTDS;SERVER={server_ip};PORT=1433;DATABASE={database};UID={user};PWD={password}'
