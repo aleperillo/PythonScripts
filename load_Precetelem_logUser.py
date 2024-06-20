@@ -8,16 +8,17 @@ from bson import ObjectId
 logging.basicConfig(filename='datatransfer.log', level=logging.INFO)
 
 try:
-    # Conexión a MongoDB
-    mongo_client = pymongo.MongoClient("mongodb://dba_mok:4R1o0cd*oZ3*@10.80.24.95:27017")
-    mongo_db = mongo_client['logUser_Precetelem']
-    mongo_collection = mongo_db['logUser']
+   # Conexión a MongoDB
+    mongo_client = pymongo.MongoClient("mongodb://user:password@serverIP:27017")
+    mongo_db = mongo_client['Database']
+    mongo_collection = mongo_db['Collection']
 
     # Conexión a SQL Server
-    server_ip = '10.80.24.165'
-    database = 'DW_Ecosistemas_PT'
-    user = 'user_premongo'
+    server_ip = 'SqlServer'
+    database = 'SqlDatabasename'
+    user = 'user_mongo'
     password = ''
+
 
     sql_server_connection_string = (
     f'DRIVER=FreeTDS;SERVER={server_ip};PORT=1433;DATABASE={database};UID={user};PWD={password}'
